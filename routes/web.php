@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/companies/{name}', [\App\Http\Controllers\UsersController::class, 'index']);
+Route::post('/file', [\App\Http\Controllers\PdfServiceController::class, 'uploadPDF'])->name('file');
 
